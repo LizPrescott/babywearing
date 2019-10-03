@@ -30,4 +30,5 @@ class User < ApplicationRecord
     WelcomeMailer.welcome_email(self).deliver
   end
 
+  belongs_to :organization, optional: true
 end
