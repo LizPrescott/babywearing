@@ -1,5 +1,5 @@
 class AddOrganizationKeyToUserTable < ActiveRecord::Migration[5.2]
   def change
-    add_column :users, :organization_id, :integer
+    add_reference :users, :organization, null: true, foreign_key: true
   end
 end
